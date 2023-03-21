@@ -18,7 +18,7 @@ syntax = "proto3";
 
 package netsvr.infoDelete;
 
-option go_package = "pkg/protocol;protocol";
+option go_package = "protocol/";
 
 //删除连接的info信息
 message InfoDelete {

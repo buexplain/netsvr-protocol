@@ -18,7 +18,7 @@ syntax = "proto3";
 
 package netsvr.metricsResp;
 
-option go_package = "pkg/protocol;protocol";
+option go_package = "protocol/";
 
 //worker响应business，返回网关统计的服务状态
 message MetricsResp {

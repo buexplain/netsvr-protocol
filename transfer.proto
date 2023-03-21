@@ -18,7 +18,7 @@ syntax = "proto3";
 
 package netsvr.transfer;
 
-option go_package = "pkg/protocol;protocol";
+option go_package = "protocol/";
 
 //worker转发客户发送的信息到business
 message Transfer {

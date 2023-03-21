@@ -18,7 +18,7 @@ syntax = "proto3";
 
 package netsvr.checkOnlineResp;
 
-option go_package = "pkg/protocol;protocol";
+option go_package = "protocol/";
 
 //worker响应business，返回网关中已经存在的uniqId
 message CheckOnlineResp {
