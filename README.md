@@ -1,6 +1,6 @@
 # netsvr-protocol
 
-这个套`proto`是[https://github.com/buexplain/netsvr](https://github.com/buexplain/netsvr)的网关层与业务层的交互协议。
+这套`proto`是[https://github.com/buexplain/netsvr](https://github.com/buexplain/netsvr)的网关层与业务层的交互协议。
 
 指令有如下三种类别：
 
