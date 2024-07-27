@@ -1,4 +1,4 @@
-module github.com/buexplain/netsvr-protocol/v2
+module github.com/buexplain/netsvr-protocol/v3
 
 go 1.20
 
