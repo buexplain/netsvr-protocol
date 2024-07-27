@@ -16,14 +16,20 @@
 
 syntax = "proto3";
 
-package netsvr.uniqIdCountResp;
+package netsvr.event;
 
 option go_package = "netsvr/";
 option php_namespace = "Netsvr";
 option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
-//worker响应business，返回网关中uniqId的数量
-message UniqIdCountResp {
-  //网关中uniqId的数量
-  int32 count = 1;
+//网关的事件
+enum Event {
+  //毫无意义的占位符，目的是避免枚举从零开始
+  Placeholder = 0;
+  //连接打开事件
+  OnOpen = 1;
+  //连接关闭事件
+  OnClose = 2;
+  //连接收到消息事件
+  OnMessage = 4;
 }

@@ -31,6 +31,8 @@ message ConnInfoResp {
 message ConnInfoRespItem {
   //当前连接的session
   string session = 1;
+  //当前连接绑定的客户id
+  string customerId = 2;
   //当前连接订阅的主题
-  repeated string topics = 2;
+  repeated string topics = 3;
 }

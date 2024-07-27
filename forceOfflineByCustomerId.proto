@@ -16,14 +16,16 @@
 
 syntax = "proto3";
 
-package netsvr.uniqIdCountResp;
+package netsvr.forceOfflineByCustomerId;
 
 option go_package = "netsvr/";
 option php_namespace = "Netsvr";
 option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
-//worker响应business，返回网关中uniqId的数量
-message UniqIdCountResp {
-  //网关中uniqId的数量
-  int32 count = 1;
+//business向worker请求，将某几个连接强制关闭
+message ForceOfflineByCustomerId {
+  //目标customerId
+  repeated string customerIds = 1;
+  //需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
+  bytes data = 2;
 }

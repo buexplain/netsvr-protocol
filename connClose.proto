@@ -24,6 +24,12 @@ option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
 //worker转发客户连接关闭的信息到business
 message ConnClose {
+  //客户在网关中的唯一id
   string uniqId = 1;
-  string session = 2;
+  //客户在业务系统中的唯一id
+  string customerId = 2;
+  //客户存储在网关中的数据
+  string  session = 3;
+  //客户订阅的主题
+  repeated string topics = 4;
 }

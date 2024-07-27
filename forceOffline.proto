@@ -26,6 +26,6 @@ option php_metadata_namespace = "Netsvr\\GPBMetadata";
 message ForceOffline {
   //目标uniqId
   repeated string uniqIds = 1;
-  //需要发给客户的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭连接，反之，立马关闭连接
+  //需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
   bytes data = 2;
 }

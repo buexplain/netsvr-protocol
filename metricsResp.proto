@@ -24,29 +24,29 @@ option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
 //worker响应business，返回网关统计的服务状态
 message MetricsResp {
-  //网关唯一编号
-  int32 serverId = 1;
   //key是统计的项，value是统计结果
-  map<int32, MetricsRespItem> items = 2;
+  map<int32, MetricsRespItem> items = 1;
 }
 
 message MetricsRespItem {
+  //统计的项
+  int32 item = 1;
   //总数
-  int64 count = 1;
+  int64 count = 2;
   //每秒速率
-  float meanRate = 2;
+  float meanRate = 3;
   //每秒速率的最大值
-  float meanRateMax = 3;
+  float meanRateMax = 4;
   //每1分钟速率
-  float rate1 = 4;
+  float rate1 = 5;
   //每1分钟速率的最大值
-  float  rate1Max = 5;
+  float  rate1Max = 6;
   //每5分钟速率
-  float rate5 = 6;
+  float rate5 = 7;
   //每5分钟速率的最大值
-  float  rate5Max = 7;
+  float  rate5Max = 8;
   //每15分钟速率
-  float rate15 = 8;
+  float rate15 = 9;
   //每15分钟速率的最大值
-  float  rate15Max = 9;
+  float  rate15Max = 10;
 }

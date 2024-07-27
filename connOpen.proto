@@ -24,12 +24,21 @@ option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
 //worker转发客户连接打开的信息到business
 message ConnOpen {
-  //网关分配给连接的唯一id，格式是：网关服务编号(2个字符)+时间戳(8个字符)+自增值(8个字符)，共18个16进制的字符
+  //网关分配给连接的唯一id，格式是：网关进程的worker服务监听的ip地址(4字节)+网关进程的worker服务监听的port(2字节)+时间戳(4字节)+自增id(4字节)，共14字节，28个16进制的字符
+  // php解码uniqId示例：
+  // $ret =  unpack('Nip/nport/Ntimestamp/NincrId', pack('H*', '7f00000117ad6621e43b8baa1b9a'));
+  // $ret['ip'] = long2ip($ret['ip']);
+  // var_dump($ret);
   string uniqId = 1;
   //连接携带的GET参数
   string rawQuery = 2;
-  //连接的websocket子协议信息
+  //连接携带的websocket子协议信息
   repeated string subProtocol = 3;
-  //X-Forwarded-For，如果网关没有从header中拿到X-Forwarded-For的数据，则会赋值与本网关进程直连的客户端ip
+  //读取的header：X-Forwarded-For
   string xForwardedFor = 4;
+  //读取的header：X-Real-IP
+  string xRealIp = 5;
+  //连接的IP地址，这是直接连接到网关的IP地址
+  string remoteAddr = 6;
+
 }

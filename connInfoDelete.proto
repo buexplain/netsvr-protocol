@@ -26,10 +26,10 @@ option php_metadata_namespace = "Netsvr\\GPBMetadata";
 message ConnInfoDelete {
   //目标uniqId
   string uniqId = 1;
-  //是否删除uniqId，[true：让网关随机生成一个新的uniqId，false：不处理]
-  bool delUniqId = 2;
   //是否删除session，[true：让网关设置session为空字符串，false：不处理]
-  bool delSession = 3;
+  bool delSession = 2;
+  //是否删除customerId，[true：让网关设置customerId为空字符串，false：不处理]
+  bool delCustomerId = 3;
   //是否删除topic，[true：让网关设置topic为空[]string，false：不处理]
   bool delTopic = 4;
   //需要发给客户的数据，传递了则转发给客户

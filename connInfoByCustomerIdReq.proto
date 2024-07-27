@@ -16,14 +16,20 @@
 
 syntax = "proto3";
 
-package netsvr.uniqIdCountResp;
+package netsvr.connInfoByCustomerIdReq;
 
 option go_package = "netsvr/";
 option php_namespace = "Netsvr";
 option php_metadata_namespace = "Netsvr\\GPBMetadata";
 
-//worker响应business，返回网关中uniqId的数量
-message UniqIdCountResp {
-  //网关中uniqId的数量
-  int32 count = 1;
+//business向worker请求，获取目标customerId在网关中存储的信息
+message ConnInfoByCustomerIdReq {
+  //目标customerId
+  repeated string customerIds = 1;
+  //是否获取session
+  bool reqSession = 2;
+  //是否获取uniqId
+  bool reqUniqId = 3;
+  //是否获取topic
+  bool reqTopic = 4;
 }

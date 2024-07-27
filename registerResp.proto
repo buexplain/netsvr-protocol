@@ -27,12 +27,10 @@ enum RegisterRespCode {
   Success = 0;
   //解析注册proto协议失败
   UnmarshalError = 1;
-  //workerId配置错误，溢出允许的范围
-  WorkerIdOverflow = 2;
-  //serverId配置错误，与网关配置的不一致
-  ServerIdInconsistent = 3;
-  //已经注册过，不允许重复发起注册请求
-  DuplicateRegister = 4;
+  //需要接收的事件设置错误
+  InvalidEvent = 2;
+  //连接已经注册过，不允许重复发起注册请求
+  DuplicateRegister = 3;
 }
 
 //business向worker请求，注册自己，worker响应注册结果
@@ -40,5 +38,5 @@ message RegisterResp {
   RegisterRespCode code = 1;
   string message = 2;
   //注册成功后的id
-  string registerId = 3;
+  string connId = 3;
 }
