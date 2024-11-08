@@ -30,6 +30,6 @@ message TopicCustomerIdListResp {
 }
 
 message TopicCustomerIdListRespItem {
-  //当前customerId包含的uniqId
+  //当前topic包含的customerId
   repeated string customerIds = 1;
 }
