@@ -1,5 +1,7 @@
-module github.com/buexplain/netsvr-protocol/v3
+module github.com/buexplain/netsvr-protocol/v4
 
-go 1.20
+go 1.21
 
-require google.golang.org/protobuf v1.34.2
+toolchain go1.22.7
+
+require google.golang.org/protobuf v1.35.1
