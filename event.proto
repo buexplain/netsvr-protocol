@@ -18,9 +18,9 @@ syntax = "proto3";
 
 package netsvr.event;
 
-option go_package = "netsvr/";
-option php_namespace = "Netsvr";
-option php_metadata_namespace = "Netsvr\\GPBMetadata";
+option go_package = "netsvrProtocol/";
+option php_namespace = "NetsvrProtocol";
+option php_metadata_namespace = "NetsvrProtocol\\GPBMetadata";
 
 //网关的事件
 enum Event {

@@ -18,9 +18,9 @@ syntax = "proto3";
 
 package netsvr.forceOfflineByCustomerId;
 
-option go_package = "netsvr/";
-option php_namespace = "Netsvr";
-option php_metadata_namespace = "Netsvr\\GPBMetadata";
+option go_package = "netsvrProtocol/";
+option php_namespace = "NetsvrProtocol";
+option php_metadata_namespace = "NetsvrProtocol\\GPBMetadata";
 
 //business向worker请求，将某几个连接强制关闭
 message ForceOfflineByCustomerId {

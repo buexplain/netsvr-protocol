@@ -18,9 +18,9 @@ syntax = "proto3";
 
 package netsvr.limitReq;
 
-option go_package = "netsvr/";
-option php_namespace = "Netsvr";
-option php_metadata_namespace = "Netsvr\\GPBMetadata";
+option go_package = "netsvrProtocol/";
+option php_namespace = "NetsvrProtocol";
+option php_metadata_namespace = "NetsvrProtocol\\GPBMetadata";
 
 //更新网关服务的限流配置，并返回网关中的最新的限流配置
 //如果设置一个无效的并发数，则会忽略这个配置

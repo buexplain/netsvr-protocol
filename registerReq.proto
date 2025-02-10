@@ -18,9 +18,9 @@ syntax = "proto3";
 
 package netsvr.registerReq;
 
-option go_package = "netsvr/";
-option php_namespace = "Netsvr";
-option php_metadata_namespace = "Netsvr\\GPBMetadata";
+option go_package = "netsvrProtocol/";
+option php_namespace = "NetsvrProtocol";
+option php_metadata_namespace = "NetsvrProtocol\\GPBMetadata";
 
 //business向worker请求，注册自己
 //注册逻辑：检查注册条件后，会给business的连接异步写入注册成功的信息、将business的连接注册到管理器，让business的连接接收网关转发的客户数据，如果注册失败，会返回失败的信息
