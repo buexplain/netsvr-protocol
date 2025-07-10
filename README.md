@@ -10,11 +10,12 @@
 
 ### 网关单向转发给业务进程的指令
 
-| 名称                | 编号                                    | proto                                         | 说明                  |
-|-------------------|---------------------------------------|-----------------------------------------------|---------------------|
-| websocket连接打开     | <a href="cmd.proto#L30">ConnOpen</a>  | <a href="connOpen.proto">connOpen.proto</a>   | 网关转发客户端连接打开的信息到业务进程 |
-| websocket连接关闭     | <a href="cmd.proto#L31">ConnClose</a> | <a href="connClose.proto">connClose.proto</a> | 网关转发客户端连接关闭的信息到业务进程 |
-| 透传客户端的websocket数据 | <a href="cmd.proto#L32">Transfer</a>  | <a href="transfer.proto">transfer.proto</a>   | 网关转发客户端连接发来的数据到业务进程 |
+| 名称                         | 编号                                    | proto                                               | 说明                                           |
+|----------------------------|---------------------------------------|-----------------------------------------------------|----------------------------------------------|
+| websocket连接打开              | <a href="cmd.proto#L30">ConnOpen</a>  | <a href="connOpen.proto">connOpen.proto</a>         | 网关转发客户端连接打开的信息到业务进程                          |
+| websocket连接打开信息回调到业务接口的返回值 | 无                                     | <a href="connOpenResp.proto">connOpenResp.proto</a> | 网关通过http协议转发客户端连接打开的信息到业务进程http接口，接口返回给网关的数据 |
+| websocket连接关闭              | <a href="cmd.proto#L31">ConnClose</a> | <a href="connClose.proto">connClose.proto</a>       | 网关转发客户端连接关闭的信息到业务进程                          |
+| 透传客户端的websocket数据          | <a href="cmd.proto#L32">Transfer</a>  | <a href="transfer.proto">transfer.proto</a>         | 网关转发客户端连接发来的数据到业务进程                          |
 
 ### 业务进程单向请求网关的指令
 
